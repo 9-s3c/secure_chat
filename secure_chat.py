@@ -78,15 +78,8 @@ def server_exchange():
         else:
             pass
     aes_key = asym_encrypt(sym_key)
-#    sym_key_data = f"===AES_KEY===\n{aes_key}".encode('utf-8')
-#    while True:
     conn.send(aes_key)
-#    data = conn.recv(10240).decode()
-#    if "===OK===" in data:
     print("exchanged keys with client")
-#            break
-#        else:
-#            pass
 
 def client_exchange():
     print("exhanging keys with server")
